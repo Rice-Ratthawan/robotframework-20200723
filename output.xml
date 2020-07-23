@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200723 16:15:04.926" rpa="false">
+<suite id="s1" name="Google" source="C:\robot\google.robot">
+<test id="s1-t1" name="ค้นหา กาแฟ ใน Google ผ่าน Chrome">
+<kw name="เปิดโครมเข้า URL google.co.th">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://google.co.th</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200723 16:15:05.234" level="INFO">Opening browser 'chrome' to base url 'http://google.co.th'.</msg>
+<status status="PASS" starttime="20200723 16:15:05.234" endtime="20200723 16:15:11.463"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:05.234" endtime="20200723 16:15:11.463"></status>
+</kw>
+<kw name="ค้นหาคำว่า กาแฟ">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>q</arg>
+<arg>กาแฟ</arg>
+</arguments>
+<msg timestamp="20200723 16:15:11.467" level="INFO">Typing text 'กาแฟ' into text field 'q'.</msg>
+<status status="PASS" starttime="20200723 16:15:11.467" endtime="20200723 16:15:11.952"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:11.466" endtime="20200723 16:15:11.953"></status>
+</kw>
+<kw name="กดปุ่มค้นหาหรือEnter">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>q</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200723 16:15:11.956" level="INFO">Sending key(s) ('RETURN',) to q element.</msg>
+<msg timestamp="20200723 16:15:12.642" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200723 16:15:12.642" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200723 16:15:11.955" endtime="20200723 16:15:16.019"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>กาแฟ - ค้นหาด้วย Google</arg>
+</arguments>
+<msg timestamp="20200723 16:15:16.033" level="INFO">Page title is 'กาแฟ - ค้นหาด้วย Google'.</msg>
+<status status="PASS" starttime="20200723 16:15:16.019" endtime="20200723 16:15:16.034"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:11.954" endtime="20200723 16:15:16.034"></status>
+</kw>
+<kw name="จะต้องพบคำว่า กาแฟ ในผลลัพธ์">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>กาแฟ</arg>
+<arg>TRACE</arg>
+</arguments>
+<msg timestamp="20200723 16:15:16.176" level="INFO">Current page contains text 'กาแฟ'.</msg>
+<status status="PASS" starttime="20200723 16:15:16.036" endtime="20200723 16:15:16.176"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:16.035" endtime="20200723 16:15:16.177"></status>
+</kw>
+<kw name="คลิกลิ้งแรกที่เจอ">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="rso"]/div[2]/div/div[1]/a/h3</arg>
+</arguments>
+<msg timestamp="20200723 16:15:16.178" level="INFO">Clicking element '//*[@id="rso"]/div[2]/div/div[1]/a/h3'.</msg>
+<status status="PASS" starttime="20200723 16:15:16.177" endtime="20200723 16:15:17.731"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:16.177" endtime="20200723 16:15:17.731"></status>
+</kw>
+<status status="PASS" starttime="20200723 16:15:05.233" endtime="20200723 16:15:17.733" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200723 16:15:04.930" endtime="20200723 16:15:17.737"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Google">Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

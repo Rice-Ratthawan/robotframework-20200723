@@ -17,5 +17,4 @@ Library    SeleniumLibrary
 กดปุ่มค้นหาหรือEnter
     Press Keys    q    RETURN
     Title Should Be    กาแฟ - ค้นหาด้วย Google
-จะต้องพบคำว่า กาแฟ ในผลลัพธ์
-    Page Should Contain    กาแฟ    TRACE
+
