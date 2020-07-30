@@ -23,3 +23,4 @@ jobs:
         env:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/workshop-04
+          ROBOT_OPTIONS: -v URL:http://www.google.com
